@@ -1,0 +1,81 @@
+双向链表
+
+SplDoublyLinkedList 中 iterator的4中mode:
+
+    const IT_MODE_LIFO = 2; // Stack:后进先出
+    const IT_MODE_FIFO = 0; // Queue:先进先出 default值
+    const IT_MODE_DELETE = 1; // 元素由迭代器删除
+    const IT_MODE_KEEP = 0; // 元素由迭代器遍历 default值
+
+
+    public void setIteratorMode($mode);
+        这个方法用于设置迭代器模式;
+        作用于实例的private int $flags属性上.
+
+    dllist实例的数据结构,是以数组的结构存储在 private array $dllist 属性上
+
+
+$dll = new SplDoublyLinkedList();
+
+// 向链表尾部压入数据
+$dll->push($value);
+
+// 向链表头部插入数据
+$dll->unshift($value);
+
+// 检测指定offset是否存在value
+$dll->offsetExists($index);
+
+// 从指定offset获取value
+$dll->offsetGet($index);
+
+// 删除指定位置的值
+$dll->offsetUnset($index);
+
+// 获取ddl的长度
+$dll->count();
+
+// 检测ddl是否为空
+$dll->isEmpty();
+
+// 序列化存储
+$dll->serialize()
+
+// 反序列化
+$dll->unserialize($str)
+
+// 初始化链表,只有先执行了此方法,才能使用操作游标的方法
+$dll->rewind()
+
+// 获取当前游标的offset
+$dll->key()
+
+// 获取当前游标的value
+$dll->current()
+
+// 返回第一个节点value
+$dll->top()
+
+// 返回最后一个节点value
+$dll->top()
+
+// 讲dll最后一个节点弹出
+$dll->pop()
+
+// 讲dll第一个节点弹出
+$dll->shift()
+
+//在指定offset插入值,当前及之后的value的offset会+1
+$dll->add($index, $value);
+
+
+
+
+
+
+
+
+
+
+
+

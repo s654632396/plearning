@@ -1,0 +1,117 @@
+
+SplHeap是一个抽象类,不能直接被实例化
+子类继承了SplHeap,需要去实现 compare 方法
+注意的是, 该方法的返回值,必须是int类型
+
+abstract class SplHeap implements Iterator, Traversable, Countable
+{
+
+        /**
+         * Extracts a node from top of the heap and sift up.
+         * @link http://php.net/manual/en/splheap.extract.php
+         * @return mixed The value of the extracted node.
+         * @since 5.3.0
+         */
+        public function extract () {}
+
+        /**
+         * Inserts an element in the heap by sifting it up.
+         * @link http://php.net/manual/en/splheap.insert.php
+         * @param mixed $value <p>
+         * The value to insert.
+         * </p>
+         * @return void
+         * @since 5.3.0
+         */
+        public function insert ($value) {}
+
+        /**
+	 * Peeks at the node from the top of the heap
+         * @link http://php.net/manual/en/splheap.top.php
+         * @return mixed The value of the node on the top.
+         * @since 5.3.0
+         */
+        public function top () {}
+
+        /**
+         * Counts the number of elements in the heap.
+         * @link http://php.net/manual/en/splheap.count.php
+         * @return int the number of elements in the heap.
+         * @since 5.3.0
+         */
+        public function count () {}
+
+        /**
+         * Checks whether the heap is empty.
+         * @link http://php.net/manual/en/splheap.isempty.php
+         * @return bool whether the heap is empty.
+         * @since 5.3.0
+         */
+        public function isEmpty () {}
+
+        /**
+         * Rewind iterator back to the start (no-op)
+         * @link http://php.net/manual/en/splheap.rewind.php
+         * @return void
+         * @since 5.3.0
+         */
+        public function rewind () {}
+
+        /**
+         * Return current node pointed by the iterator
+         * @link http://php.net/manual/en/splheap.current.php
+         * @return mixed The current node value.
+         * @since 5.3.0
+         */
+        public function current () {}
+
+        /**
+         * Return current node index
+         * @link http://php.net/manual/en/splheap.key.php
+         * @return mixed The current node index.
+         * @since 5.3.0
+         */
+        public function key () {}
+
+        /**
+         * Move to the next node
+         * @link http://php.net/manual/en/splheap.next.php
+         * @return void
+         * @since 5.3.0
+         */
+        public function next () {}
+
+        /**
+         * Check whether the heap contains more nodes
+         * @link http://php.net/manual/en/splheap.valid.php
+         * @return bool true if the heap contains any more nodes, false otherwise.
+         * @since 5.3.0
+         */
+        public function valid () {}
+
+        /**
+         * Recover from the corrupted state and allow further actions on the heap.
+         * @link http://php.net/manual/en/splheap.recoverfromcorruption.php
+         * @return void
+         * @since 5.3.0
+         */
+        public function recoverFromCorruption () {}
+
+        /**
+         * Compare elements in order to place them correctly in the heap while sifting up.
+         * @link http://php.net/manual/en/splheap.compare.php
+         * @param mixed $value1 <p>
+         * The value of the first node being compared.
+         * </p>
+         * @param mixed $value2 <p>
+         * The value of the second node being compared.
+         * </p>
+	 * @return int Result of the comparison, positive integer if <i>value1</i> is greater than <i>value2</i>, 0 if they are equal, negative integer otherwise.
+         * </p>
+         * <p>
+         * Having multiple elements with the same value in a Heap is not recommended. They will end up in an arbitrary relative position.
+         * @since 5.3.0
+         */
+        abstract protected function compare ($value1, $value2);
+
+}

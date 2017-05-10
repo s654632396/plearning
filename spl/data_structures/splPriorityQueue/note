@@ -1,0 +1,150 @@
+优先级队列
+
+
+
+
+/**
+ * The SplPriorityQueue class provides the main functionalities of an
+ * prioritized queue, implemented using a heap.
+ * @link http://php.net/manual/en/class.splpriorityqueue.php
+ */
+class SplPriorityQueue implements Iterator, Traversable, Countable {
+        const EXTR_BOTH = 3;
+        const EXTR_PRIORITY = 2;
+        const EXTR_DATA = 1;
+
+
+        /**
+         * Compare priorities in order to place elements correctly in the heap while sifting up.
+         * @link http://php.net/manual/en/splpriorityqueue.compare.php
+         * @param mixed $priority1 <p>
+         * The priority of the first node being compared.
+         * </p>
+         * @param mixed $priority2 <p>
+         * The priority of the second node being compared.
+         * </p>
+	 * @return int Result of the comparison, positive integer if <i>priority1</i> is greater than <i>priority2</i>, 0 if they are equal, negative integer otherwise.
+         * </p>
+         * <p>
+         * Multiple elements with the same priority will get dequeued in no particular order.
+         * @since 5.3.0
+         */
+        public function compare ($priority1, $priority2) {}
+
+        /**
+         * Inserts an element in the queue by sifting it up.
+         * @link http://php.net/manual/en/splpriorityqueue.insert.php
+         * @param mixed $value <p>
+         * The value to insert.
+         * </p>
+         * @param mixed $priority <p>
+         * The associated priority.
+         * </p>
+         * @return void
+         * @since 5.3.0
+         */
+        public function insert ($value, $priority) {}
+
+        /**
+         * Sets the mode of extraction
+         * @link http://php.net/manual/en/splpriorityqueue.setextractflags.php
+         * @param int $flags <p>
+	 * Defines what is extracted by <b>SplPriorityQueue::current</b>,
+	 * <b>SplPriorityQueue::top</b> and
+ 	 * <b>SplPriorityQueue::extract</b>.
+        * </p>
+	 * <b>SplPriorityQueue::EXTR_DATA</b> (0x00000001): Extract the data
+         * @return void
+         * @since 5.3.0
+         */
+        public function setExtractFlags ($flags) {}
+
+        /**
+	 * Peeks at the node from the top of the queue
+         * @link http://php.net/manual/en/splpriorityqueue.top.php
+         * @return mixed The value or priority (or both) of the top node, depending on the extract flag.
+         * @since 5.3.0
+         */
+        public function top () {}
+
+        /**
+         * Extracts a node from top of the heap and sift up.
+         * @link http://php.net/manual/en/splpriorityqueue.extract.php
+         * @return mixed The value or priority (or both) of the extracted node, depending on the extract flag.
+         * @since 5.3.0
+         */
+        public function extract () {}
+
+        /**
+         * Counts the number of elements in the queue.
+         * @link http://php.net/manual/en/splpriorityqueue.count.php
+         * @return int the number of elements in the queue.
+         * @since 5.3.0
+         */
+        public function count () {}
+
+        /**
+         * Checks whether the queue is empty.
+         * @link http://php.net/manual/en/splpriorityqueue.isempty.php
+         * @return bool whether the queue is empty.
+         * @since 5.3.0
+         */
+        public function isEmpty () {}
+
+        /**
+         * Rewind iterator back to the start (no-op)
+         * @link http://php.net/manual/en/splpriorityqueue.rewind.php
+         * @return void
+         * @since 5.3.0
+         */
+        public function rewind () {}
+
+        /**
+         * Return current node pointed by the iterator
+         * @link http://php.net/manual/en/splpriorityqueue.current.php
+         * @return mixed The value or priority (or both) of the current node, depending on the extract flag.
+         * @since 5.3.0
+         */
+        public function current () {}
+
+        /**
+         * Return current node index
+         * @link http://php.net/manual/en/splpriorityqueue.key.php
+         * @return mixed The current node index.
+         * @since 5.3.0
+         */
+        public function key () {}
+
+        /**
+         * Move to the next node
+         * @link http://php.net/manual/en/splpriorityqueue.next.php
+         * @return void
+         * @since 5.3.0
+         */
+        public function next () {}
+
+        /**
+         * Check whether the queue contains more nodes
+         * @link http://php.net/manual/en/splpriorityqueue.valid.php
+         * @return bool true if the queue contains any more nodes, false otherwise.
+         * @since 5.3.0
+         */
+        public function valid () {}
+
+        /**
+         * Recover from the corrupted state and allow further actions on the queue.
+         * @link http://php.net/manual/en/splpriorityqueue.recoverfromcorruption.php
+         * @return void
+         * @since 5.3.0
+         */
+        public function recoverFromCorruption () {}
+}
+
+
+
+
+
+
+
+
+

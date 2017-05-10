@@ -1,0 +1,42 @@
+/**
+ * The SplQueue class provides the main functionalities of a queue implemented using a doubly linked list.
+ * @link http://php.net/manual/en/class.splqueue.php
+ */
+class SplQueue extends SplDoublyLinkedList implements ArrayAccess, Countable, Traversable, Iterator {
+
+
+    /**
+     * Adds an element to the queue.
+     * @link http://php.net/manual/en/splqueue.enqueue.php
+     * @param mixed $value <p>
+     * The value to enqueue.
+     * </p>
+     * @return void
+     * @since 5.3.0
+     */
+    public function enqueue ($value) {}
+
+    /**
+     * Dequeues a node from the queue
+     * @link http://php.net/manual/en/splqueue.dequeue.php
+     * @return mixed The value of the dequeued node.
+     * @since 5.3.0
+     */
+    public function dequeue () {}
+
+    /**
+     * Sets the mode of iteration
+     * @link http://php.net/manual/en/spldoublylinkedlist.setiteratormode.php
+     * @param int $mode <p>
+     * There are two orthogonal sets of modes that can be set:
+     * </p>
+     * The direction of the iteration (either one or the other):
+     * @since 5.3.0
+     * <b>SplDoublyLinkedList::IT_MODE_LIFO</b> (Stack style)
+     * @return void
+     */
+    public function setIteratorMode ($mode) {}
+
+}
+
+private 'flags' (SplDoublyLinkedList) => int 4

@@ -1,0 +1,5 @@
+SplObjectStorage 是什么?
+
+php的数组可以看做是 string/integer 到 data 的一个映射的数据结构
+那么
+SplObjectStorage就是 ojbect 到 data 的一个映射的数据结构

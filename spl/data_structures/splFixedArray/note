@@ -1,0 +1,27 @@
+SplFixedArray类提供了类似数组的主要功能
+它和普通的PHP数组区别在于
+    SplFixedArray的长度是固定的
+    只允许范围内的整数作为索引
+
+其优点在于它允许更快的阵列实现
+
+
+__construct([int $size = 0])
+    初始化一个定长的数组,并且填充数组值为null
+    这个索引的区间范围,为0 - PHP_INT_MAX
+
+public int setSize( int $size )
+    设置新大小.
+    如果大小小于当前的数组大小,则新尺寸超过的部分,都将被舍弃
+    如果大小大于当前的素组大小,则多余的部分会用 null 来填充
+
+public static SplFixedArray formArray(array $array [, bool $save_indexes = true])
+    导入一个php数组为 SplFixedArray 实例
+    save_indexes 保存原数组的数字索引
+
+
+public array toArray()
+    返回为一个php的数组
+
+
+

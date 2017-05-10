@@ -1,0 +1,14 @@
+stack 继承于 SplDoublyinkedList
+
+/**
+ * Sets the mode of iteration 设置迭代mode
+ * @link http://php.net/manual/en/spldoublylinkedlist.setiteratormode.php
+ * @param int $mode <p>
+ * There are two orthogonal sets of modes that can be set:
+ * </p>
+ * The direction of the iteration (either one or the other):
+ * <b>SplDoublyLinkedList::IT_MODE_LIFO</b> (Stack style)
+ * @return void
+ * @since 5.3.0
+ */
+public function setIteratorMode ($mode) {}
